@@ -1,0 +1,25 @@
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.gaming {
+    font-size: 36px;
+    color: transparent;
+    background-clip: text;
+
+    /* 横長で虹色を作る */
+    background-image: linear-gradient(to right, Magenta, yellow, Cyan, Magenta);
+    background-size: 1200%; 
+    animation: gaming 4s linear infinite;
+}
+
+@keyframes gaming {
+    /* backgroundを移動させる */
+    100% { background-position-x: 200%; }
+}
