@@ -12,12 +12,14 @@ function App() {
         return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             .map((_) => [rand(4, 8), rand(20, 80), rand(10, 90)])
             .map(([frequency, x, y]) => <div css={css(`
-                font-size: 36px;
+                font-size: 4vw;
                 color: #d6f414;
                 text-align: center;
                 position: absolute;
                 top: ${y}%;
                 left: ${x}%;
+                user-select: none;
+                cursor: default;
                 animation: blink ${frequency}s ease-out infinite alternate;
 
                 @keyframes blink {
@@ -26,13 +28,13 @@ function App() {
                     100% { opacity: 1; }
                 }
                 `)}>
-                キッつ...
+                ｷﾂ...
             </div>)
     }
 
     function gen_rainbow() {
         return <div css={css(`
-                    font-size: 44px;
+                    font-size: 8vw;
                     font-weight: bold;
                     font-family: "Noto Serif";
                     color: transparent;
@@ -40,6 +42,8 @@ function App() {
                     position: absolute;
                     top: ${rand(10, 90)}%;
                     left: ${rand(20, 80)}%;
+                    user-select: none;
+                    cursor: default;
 
                     background-clip: text;
                     background-image: linear-gradient(to right, #33ffcc, #ffff33, #66ff33, #00ccff);
@@ -56,7 +60,7 @@ function App() {
                         100% { background-position-x: 200%; }
                     }
             `)}>
-            キッつ...
+            キッつぅ♡
         </div>;
     }
 
